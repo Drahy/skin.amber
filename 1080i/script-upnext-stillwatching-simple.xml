@@ -60,7 +60,7 @@
                         <height>46</height>
                         <aspect>keep</aspect>
                         <texture>nextupicons/30.png</texture>
-                        <colordiffuse>$VAR[LabelTextColor]</colordiffuse>
+                        <colordiffuse>$VAR[UpNextCompactIconColor]</colordiffuse>
                         <animation effect="slide" end="13,5" time="0" condition="true">Conditional</animation>
                         <visible>Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
                     </control>
@@ -69,7 +69,7 @@
                         <height>46</height>
                         <aspect>keep</aspect>
                         <texture>$INFO[Player.TimeRemaining(ss),nextupicons/,.png]</texture>
-                        <colordiffuse>$VAR[LabelTextColor]</colordiffuse>
+                        <colordiffuse>$VAR[UpNextCompactIconColor]</colordiffuse>
                         <animation effect="slide" end="13,5" time="0" condition="true">Conditional</animation>
                         <visible>!Integer.IsGreater(Player.TimeRemaining(ss),30)</visible>
                     </control>

@@ -1,5 +1,5 @@
 Unreleased
-- Fix compact Up Next labels and display remaining time as a readable clock.
+- Fix compact Up Next labels, show remaining time as a readable clock, and keep countdown icons legible when focused.
 
 3.4.32 (11-01-2022)
 - Allow different view types for PVR
