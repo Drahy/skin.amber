@@ -1488,6 +1488,11 @@
 		<value>Black</value>
 	</variable>
 
+	<variable name="UpNextCompactLabel">
+		<value condition="String.IsEqual(Window.Property(credits_countdown),true)">      $ADDON[service.upnext 30050]</value>
+		<value>      $ADDON[service.upnext 30049]$INFO[Player.TimeRemaining, (,)]</value>
+	</variable>
+
 	<variable name="UpNextCompactIconColor">
 		<value condition="Control.HasFocus(3012)">$VAR[FocusedTextColor]</value>
 		<value>$VAR[LabelTextColor]</value>

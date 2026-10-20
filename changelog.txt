@@ -1,5 +1,5 @@
 Unreleased
-- Fix compact Up Next labels, show remaining time as a readable clock, and keep countdown icons legible when focused.
+- Fix compact Up Next labels, keep countdown icons legible when focused, and show the credits countdown with a Back cancellation hint when supported by Up Next.
 
 3.4.32 (11-01-2022)
 - Allow different view types for PVR
