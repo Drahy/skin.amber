@@ -7,8 +7,8 @@
 	<onload>ClearProperty(SingleSearchCalledInfo)</onload>
 	<onload>ClearProperty(InfoCalledGeneralSearch)</onload>
 	<onload>ClearProperty(InfoCalledSingleSearch)</onload>
-	<onload>Skin.Reset(CustomSearchTerm)</onload>
-	<onload>Skin.Reset(SingleSearchTerm)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(CustomSearchTerm))">Skin.Reset(CustomSearchTerm)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(SingleSearchTerm))">Skin.Reset(SingleSearchTerm)</onload>
 	<onload>ClearProperty(MediaMenu,Home)</onload>
 	<onload>ClearProperty(gallery)</onload>
     <onload condition="System.AddonIsEnabled(script.skin.info.service) + String.IsEmpty(Window(home).Property(skininfos_daemon_running))">RunScript(script.skin.info.service)</onload>
@@ -18,8 +18,8 @@
 	<onunload>ClearProperty(SingleSearchCalledInfo)</onunload>
 	<onunload>ClearProperty(InfoCalledGeneralSearch)</onunload>
 	<onunload>ClearProperty(InfoCalledSingleSearch)</onunload>
-	<onunload>Skin.Reset(CustomSearchTerm)</onunload>
-	<onunload>Skin.Reset(SingleSearchTerm)</onunload>
+	<onunload condition="[!System.AddonIsEnabled(service.sc.profilesync) | String.IsEmpty(Window(Home).Property(Amber.ShuttingDown))] + !String.IsEmpty(Skin.String(CustomSearchTerm))">Skin.Reset(CustomSearchTerm)</onunload>
+	<onunload condition="[!System.AddonIsEnabled(service.sc.profilesync) | String.IsEmpty(Window(Home).Property(Amber.ShuttingDown))] + !String.IsEmpty(Skin.String(SingleSearchTerm))">Skin.Reset(SingleSearchTerm)</onunload>
 	<onunload>ClearProperty(gallery)</onunload>
 	<menucontrol>9000</menucontrol>
 	<controls>
